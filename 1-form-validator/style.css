@@ -1,0 +1,80 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary: #ecf4f3;
+	--secondary: #68b0ab;
+	--tertier: #006a71;
+	--contrast: #ff7e67;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1em;
+}
+
+.container {
+	padding: 1em;
+	background: var(--primary);
+	border-radius: 10px;
+}
+
+.form-control label {
+	display: block;
+	padding-bottom: 0.5em;
+	color: var(--tertier);
+	font-weight: 450;
+}
+
+.form-control:not(:first-child) label {
+	padding-top: 2em;
+}
+
+.form-control input {
+	outline: none;
+	border-radius: 12px;
+	border: 2px solid var(--tertier);
+	padding: 0.4em 0.8em;
+	font-size: inherit;
+	color: var(--tertier);
+}
+
+.form-control:last-of-type input {
+	margin-bottom: 2em;
+}
+
+.form-control input:focus {
+	border: 3px solid var(--secondary);
+}
+
+.btn {
+	font-size: inherit;
+	color: #fff;
+	padding: 0.5em 1em;
+	font-weight: 550;
+	text-transform: capitalize;
+	letter-spacing: 0.1em;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-primary {
+	background: var(--contrast);
+}
