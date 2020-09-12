@@ -88,3 +88,7 @@ body {
 .btn-primary {
 	background: var(--contrast);
 }
+
+.btn-primary:hover {
+	opacity: 0.75;
+}
