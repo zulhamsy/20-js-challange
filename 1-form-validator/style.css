@@ -90,5 +90,9 @@ body {
 }
 
 .btn-primary:hover {
-	opacity: 0.75;
+	filter: brightness(120%);
+}
+
+.form-control .is-invalid {
+	border: 3px solid var(--contrast);
 }
