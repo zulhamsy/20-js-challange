@@ -17,7 +17,7 @@ function validName(e) {
 
 function validEmail(e) {
   const input = e.target.value;
-  const re =  /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   if (re.test(input)) {
     email.classList.remove('is-invalid');
   } else {
@@ -44,8 +44,22 @@ function confirmPass(e) {
   }
 }
 
+function submitForm(array) {
+	array.forEach(function(elem) {
+		if(elem.value == '') {
+			elem.classList.add('is-invalid');
+		}
+	})
+}
+
 // event listener
 name.addEventListener('blur', validName);
 email.addEventListener('blur', validEmail);
 pass.addEventListener('blur', validPass);
 pass2.addEventListener('blur', confirmPass);
+
+document.querySelector('form').addEventListener('submit', function(e) {
+	e.preventDefault();
+	
+	submitForm([name,email,pass,pass2]);
+})
