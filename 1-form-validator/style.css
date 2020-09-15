@@ -100,12 +100,11 @@ body {
 
 .form-control p {
 	opacity: 0;
+	font-size: 1.2rem;
 }
 
 .form-control .is-invalid + p {
-	display: block;
 	opacity: 1;
-	font-size: 1.2rem;
 	color: var(--contrast);
 	font-style: italic;
 	padding-top: 0.5em;
