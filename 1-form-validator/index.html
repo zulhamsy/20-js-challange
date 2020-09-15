@@ -15,21 +15,25 @@
       <div class="form-control">
         <label for="name">Username</label>
         <input type="text" name="name" id="name" autocomplete="off" placeholder="alphanumerical only"/>
+        <p>Please provide valid username</p>
       </div>
       <!--Email Field-->
       <div class="form-control">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" autocomplete="off" placeholder="use valid email"/>
+        <p>Please provide valid email</p>
       </div>
       <!--Pass Field-->
       <div class="form-control">
         <label for="pass">Password</label>
-        <input type="password" name="pass" id="pass" autocomplete="off" placeholder="must above 6 characters"/>
+        <input type="password" name="pass" id="pass" autocomplete="off"/>
+        <p>Password must 6 characters or above</p>
       </div>
       <!--Confirm Pass Field-->
       <div class="form-control">
         <label for="pass2">Confirm Password</label>
         <input type="password" name="pass2" id="pass2" autocomplete="off" />
+        <p>Password not match</p>
       </div>
       <!--Button CTA-->
       <button class="btn btn-block btn-primary" type="submit">submit</button>

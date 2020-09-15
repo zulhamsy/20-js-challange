@@ -35,6 +35,17 @@ function validPass(e) {
   }
 }
 
+function checkPass(e) {
+	const input = e.target.value;
+	if(pass2.value !== '') {
+		if(input === pass2.value) {
+			pass2.classList.remove('is-invalid');
+		} else {
+			pass2.classList.add('is-invalid');
+		}
+	}
+}
+
 function confirmPass(e) {
   const input = e.target.value;
   if (input === pass.value) {
@@ -56,6 +67,7 @@ function submitForm(array) {
 name.addEventListener('blur', validName);
 email.addEventListener('blur', validEmail);
 pass.addEventListener('blur', validPass);
+pass.addEventListener('change', checkPass)
 pass2.addEventListener('blur', confirmPass);
 
 document.querySelector('form').addEventListener('submit', function(e) {

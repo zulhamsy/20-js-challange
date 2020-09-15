@@ -46,10 +46,11 @@ body {
 }
 
 .form-control:not(:first-child) label {
-	padding-top: 2em;
+	padding-top: 1.3em;
 }
 
 .form-control input {
+	width: 100%;
 	outline: none;
 	border-radius: 12px;
 	border: 2px solid var(--tertier);
@@ -58,7 +59,7 @@ body {
 	color: var(--tertier);
 }
 
-.form-control:last-of-type input {
+.form-control:last-of-type p {
 	margin-bottom: 2em;
 }
 
@@ -95,4 +96,17 @@ body {
 
 .form-control .is-invalid {
 	border: 3px solid var(--contrast);
+}
+
+.form-control p {
+	opacity: 0;
+}
+
+.form-control .is-invalid + p {
+	display: block;
+	opacity: 1;
+	font-size: 1.2rem;
+	color: var(--contrast);
+	font-style: italic;
+	padding-top: 0.5em;
 }
