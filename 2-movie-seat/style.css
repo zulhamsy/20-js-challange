@@ -117,3 +117,7 @@ small {
 .book-info {
   padding-top: 1em;
 }
+
+.book-info p {
+	font-size: 1.4rem;
+}
