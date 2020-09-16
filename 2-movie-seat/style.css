@@ -30,6 +30,16 @@ body {
   color: var(--primary-light);
 }
 
+/* Container */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Movie Selection */
+
 select {
   font-size: inherit;
   border: none;
@@ -47,11 +57,7 @@ small {
   padding-right: 0.8em;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Seating Info */
 
 .seat-info {
   width: 100%;
@@ -79,12 +85,18 @@ small {
   background: var(--secondary-dark);
 }
 
+/* Seat Selection */
+
 .seat-selected {
   background: var(--contrast);
 }
 
 .seat-occupied {
   background: var(--primary-light);
+}
+
+.seat-select .seat:not(.seat-occupied):hover {
+	transform: scale(1.2);
 }
 
 .seat-select {
@@ -113,6 +125,8 @@ small {
 .seat-select .seat:nth-last-of-type(2) {
   margin-left: 1em;
 }
+
+/* Booking Info */
 
 .book-info {
   padding-top: 1em;
