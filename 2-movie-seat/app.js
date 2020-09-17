@@ -2,6 +2,7 @@
 const movie = document.querySelector('select');
 const seats = document.querySelectorAll('.seat-select .seat');
 const container = document.querySelector('.seat-select');
+const price = document.querySelector('#price');
 
 // function handler
 function selectSeat(e) {
@@ -17,9 +18,16 @@ function selectSeat(e) {
   }
 }
 
+function selectMovie(e) {
+	const movie = e.target.value;
+	const list = {
+		avenger: 10000,
+		theraid: 15000
+	};
+	price.innerText = list[movie];
+}
+
 // event handler
-movie.addEventListener('change', function(e) {
-  console.log(e.target.value);
-});
+movie.addEventListener('change', selectMovie);
 
 container.addEventListener('click', selectSeat)
