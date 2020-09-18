@@ -4,6 +4,7 @@ const seats = document.querySelectorAll('.seat-select .seat');
 const container = document.querySelector('.seat-select');
 const price = document.querySelector('#price');
 const counter = document.querySelector('#counter');
+const dataSeat = JSON.parse(localStorage.getItem('seats'));
 
 // function helper
 function __selected() {
@@ -41,19 +42,24 @@ function selectSeat(e) {
       target.classList.add('seat-selected');
       counter.innerText = __selected().length;
       changePrice();
-      console.log(getSeatArray());
+      localStorage.setItem('seats', JSON.stringify(getSeatArray()));
     } else {
       target.classList.remove('seat-selected');
       counter.innerText = __selected().length;
       changePrice();
-      console.log(getSeatArray());
+      localStorage.setItem('seats', JSON.stringify(getSeatArray()));
     }
   }
 }
 
-
+window.onload = function() {
+  dataSeat.forEach((element) => {
+    seats[element].classList.add('seat-selected');
+    counter.innerText = __selected().length;
+    changePrice();
+  })
+}
 
 // event handler
-
 container.addEventListener('click', selectSeat);
 movie.addEventListener('change', changePrice);
