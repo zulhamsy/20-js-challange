@@ -24,11 +24,11 @@ function changePrice(e) {
 }
 
 function getSeatArray() {
-	let arr = [];
-	__selected().forEach(seat => {
-	  arr.push(Array.prototype.indexOf.call(seats, seat));
-	});
-	return arr;
+  let arr = [];
+  __selected().forEach(seat => {
+    arr.push(Array.prototype.indexOf.call(seats, seat));
+  });
+  return arr;
 }
 
 // function handler
@@ -41,15 +41,16 @@ function selectSeat(e) {
       target.classList.add('seat-selected');
       counter.innerText = __selected().length;
       changePrice();
-      //console.log(getSeatArray());
-      }
+      console.log(getSeatArray());
     } else {
       target.classList.remove('seat-selected');
       counter.innerText = __selected().length;
       changePrice();
-    	//console.log(getSeatArray());
+      console.log(getSeatArray());
     }
   }
+}
+
 
 
 // event handler
