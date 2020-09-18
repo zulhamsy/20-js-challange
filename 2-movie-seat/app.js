@@ -10,24 +10,6 @@ function __selected() {
   return document.querySelectorAll('.seat-select .seat-selected');
 }
 
-// function handler
-function selectSeat(e) {
-  const target = e.target;
-  // run function if only seat is clicked
-  if (target.classList.contains('seat') && !target.classList.contains('seat-occupied')) {
-    // check seat state
-    if (!target.classList.contains('seat-selected')) {
-      target.classList.add('seat-selected');
-      counter.innerText = __selected().length;
-      changePrice();
-    } else {
-      target.classList.remove('seat-selected');
-      counter.innerText = __selected().length;
-      changePrice();
-    }
-  }
-}
-
 function selectMovie(e) {
   const movie = e.value;
   const list = {
@@ -40,6 +22,35 @@ function selectMovie(e) {
 function changePrice(e) {
   price.innerText = counter.innerText * selectMovie(movie);
 }
+
+function getSeatArray() {
+	let arr = [];
+	__selected().forEach(seat => {
+	  arr.push(Array.prototype.indexOf.call(seats, seat));
+	});
+	return arr;
+}
+
+// function handler
+function selectSeat(e) {
+  const target = e.target;
+  // run function if only seat is clicked
+  if (target.classList.contains('seat') && !target.classList.contains('seat-occupied')) {
+    // check seat state
+    if (!target.classList.contains('seat-selected')) {
+      target.classList.add('seat-selected');
+      counter.innerText = __selected().length;
+      changePrice();
+      //console.log(getSeatArray());
+      }
+    } else {
+      target.classList.remove('seat-selected');
+      counter.innerText = __selected().length;
+      changePrice();
+    	//console.log(getSeatArray());
+    }
+  }
+
 
 // event handler
 
