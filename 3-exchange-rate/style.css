@@ -1,0 +1,41 @@
+/* ---------------- Reset ----------------- */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------- Basic Setting ------------ */
+html {
+  font-size: 62.5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	padding: 1em;
+}
+
+/* --------------- Result ----------------- */
+.result {
+	text-align: center;
+}
+
+.result .small {
+	font-size: 1.3rem;
+	padding-bottom: 0.65em;
+}
+
+.result .nominal {
+	font-size: 2.6rem;
+	font-weight: 450;
+}

@@ -2,52 +2,54 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="style.css" type="text/css" media="all" />
-    <title>Simple Exchange Calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <title>Simple Exchange Calculator</title>
 </head>
 
 <body>
-	<!--App Container-->
-	<div class="container">
-		<!--Result Section-->
-		<div class="result">
-			<p class="small">Exchange Rate</p>
-			<p class="nominal">IDR.<span>14840</span></p>
-		</div>
-		<!--Input Section-->
-		<div class="input">
-			<label>
-				<p class="label">Amount</p>
-				<input type="number"/>
-			</label>
-		</div>
-		<!--Currency Input Section-->
-		<div class="currency">
-			<p class="label">From</p>
-			<!--Base Currency-->
-			<div class="select">
-				<!--Nation Flag-->
-				<img src="#" class="nation-flag" id="flag-1"/>
-				<!--Select Currency-->
-				<select class="select-currency" id="select-1">
-				</select>
-			</div>
-			<!--Swap Icon-->
-			<img class="swap" src="#"/>
-			<!--Second Currency-->
-			<div class="select">
-			  <!--Nation Flag-->
-			  <img src="#" class="nation-flag" id="flag-2" />
-			  <!--Select Currency-->
-			  <select class="select-currency" id="select-2">
-			  </select>
-			</div>
-		</div>
-		<!--Button CTA-->
-		<button class="btn btn-primary">Exchange</button>
-	</div>
+  <!--App Container-->
+  <div class="container">
+    <!--Result Section-->
+    <div class="result">
+      <p class="small">Exchange Rate</p>
+      <p class="nominal">IDR.<span>14840</span></p>
+    </div>
+    <!--Input Section-->
+    <div class="input">
+      <label>
+        <p class="label">Amount</p>
+        <input type="number" />
+      </label>
+    </div>
+    <!--Currency Input Section-->
+    <div class="currency">
+      <p class="label">From</p>
+      <!--Base Currency-->
+      <div class="select">
+        <!--Nation Flag-->
+        <img src="https://www.countryflags.io/id/flat/32.png" class="nation-flag" id="flag-1" />
+        <!--Select Currency-->
+        <select class="select-currency" id="select-1">
+        	<option>USD</option>
+        </select>
+      </div>
+      <!--Swap Icon-->
+      <img class="swap" src="_assets/swap.png" />
+      <!--Second Currency-->
+      <div class="select">
+        <!--Nation Flag-->
+        <img src="https://www.countryflags.io/us/flat/32.png" class="nation-flag" id="flag-2" />
+        <!--Select Currency-->
+        <select class="select-currency" id="select-2">
+        	<option>IDR</option>
+        </select>
+      </div>
+    </div>
+    <!--Button CTA-->
+    <button class="btn btn-primary">Exchange</button>
+  </div>
 </body>
 
 </html>
