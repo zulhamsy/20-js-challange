@@ -45,8 +45,11 @@ const currency = [
 	];
 
 // function helper
-function showResult(json) {
+function showResult(json,trade) {
 	console.log(json);
+	
+	rate.innerHTML = trade;
+	nom.innerHTML = (input.value * json.rates[trade]).toFixed(2);
 }
 
 // function handler
@@ -62,7 +65,7 @@ function exchangeCurrency(e) {
 	const trade = document.querySelector('#select-2').selectedOptions[0].text;
 	fetch(`https://api.exchangeratesapi.io/latest?base=${base}&symbols=${trade}`)
 		.then(data => data.json())
-		.then(data => showResult(data));
+		.then(data => showResult(data, trade));
 }
 
 // Event listener
