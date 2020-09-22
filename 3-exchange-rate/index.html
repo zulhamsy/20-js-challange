@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <title>Simple Exchange Calculator</title>
 </head>
 
@@ -26,25 +27,29 @@
     <!--Currency Input Section-->
     <div class="currency">
       <p class="label">From</p>
-      <!--Base Currency-->
-      <div class="select">
-        <!--Nation Flag-->
-        <img src="https://www.countryflags.io/id/flat/32.png" class="nation-flag" id="flag-1" />
-        <!--Select Currency-->
-        <select class="select-currency" id="select-1">
-        	<option>USD</option>
-        </select>
-      </div>
-      <!--Swap Icon-->
-      <img class="swap" src="_assets/swap.png" />
-      <!--Second Currency-->
-      <div class="select">
-        <!--Nation Flag-->
-        <img src="https://www.countryflags.io/us/flat/32.png" class="nation-flag" id="flag-2" />
-        <!--Select Currency-->
-        <select class="select-currency" id="select-2">
-        	<option>IDR</option>
-        </select>
+      <div class="convert">
+        <!--Base Currency-->
+        <div class="select">
+          <!--Nation Flag-->
+          <img src="https://www.countryflags.io/id/flat/32.png" class="nation-flag" id="flag-1" />
+          <!--Select Currency-->
+          <select class="select-currency" id="select-1">
+            <option>USD</option>
+          </select>
+        </div>
+        <!--Swap Icon-->
+        <div class="swap">
+          <i class="fa fa-exchange"></i>
+        </div>
+        <!--Second Currency-->
+        <div class="select">
+          <!--Nation Flag-->
+          <img src="https://www.countryflags.io/us/flat/32.png" class="nation-flag" id="flag-2" />
+          <!--Select Currency-->
+          <select class="select-currency" id="select-2">
+            <option>IDR</option>
+          </select>
+        </div>
       </div>
     </div>
     <!--Button CTA-->

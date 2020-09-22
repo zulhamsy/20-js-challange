@@ -28,14 +28,64 @@ body {
 /* --------------- Result ----------------- */
 .result {
 	text-align: center;
+	margin-bottom: 1.6em;
 }
 
 .result .small {
-	font-size: 1.3rem;
-	padding-bottom: 0.65em;
+	font-size: 1.4rem;
+	padding-bottom: 0.7em;
 }
 
 .result .nominal {
-	font-size: 2.6rem;
+	font-size: 2.8rem;
 	font-weight: 450;
+}
+
+/* --------------- Input -----------------  */
+.input {
+	margin-bottom: 1em;
+}
+
+.label {
+	font-size: 1.2rem;
+	font-weight: 350;
+	padding-bottom: 0.5em;
+}
+
+.input input {
+	outline: none;
+	border: 2px solid #eee;
+	font-size: inherit;
+	padding: 0.4em 0.5em;
+	border-radius: 8px;
+}
+
+/* ----------- Currency Converter ----------*/
+.currency .convert,
+.convert .select{
+	display: flex;
+	width: 100%;
+}
+
+.convert .select {
+	border: 2px solid #eee;
+	border-radius: 8px;
+	padding: 0.2em 0.4em;
+}
+
+.currency .convert > * {
+	flex: 1;
+}
+
+.select-currency {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+
+.swap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
