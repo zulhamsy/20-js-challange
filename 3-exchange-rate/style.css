@@ -1,4 +1,4 @@
-/* ---------------- Reset ----------------- */
+/* --------------- Reset ----------------- */
 *,
 *:before,
 *:after {
@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-/* ------------- Basic Setting ------------ */
+/* ------------ Basic Setting ------------ */
 html {
   font-size: 62.5%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,6 +15,7 @@ html {
 
 body {
 	font-size: 1.6rem;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -23,12 +24,15 @@ body {
 
 .container {
 	padding: 1em;
+	border: 1px solid #eee;
+	border-radius: 8px;
+	border-top: 5px solid #2a9df4;
 }
 
-/* --------------- Result ----------------- */
+/* -------------- Result ----------------- */
 .result {
 	text-align: center;
-	margin-bottom: 1.6em;
+	margin-bottom: 2em;
 }
 
 .result .small {
@@ -41,9 +45,9 @@ body {
 	font-weight: 450;
 }
 
-/* --------------- Input -----------------  */
+/* --------------- Input ----------------  */
 .input {
-	margin-bottom: 1em;
+	margin-bottom: 1.2em;
 }
 
 .label {
@@ -58,9 +62,14 @@ body {
 	font-size: inherit;
 	padding: 0.4em 0.5em;
 	border-radius: 8px;
+	text-align: right;
 }
 
-/* ----------- Currency Converter ----------*/
+/* ---------- Currency Converter ----------*/
+.currency {
+	margin-bottom: 1.2em;
+}
+
 .currency .convert,
 .convert .select{
 	display: flex;
@@ -83,9 +92,29 @@ body {
 	background: none;
 }
 
-
 .swap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/* ------------- Button CTA -------------- */
+.btn {
+	font-size: inherit;
+	font-weight: 450;
+	border: none;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 0.4em;
+	border-radius: 8px;
+}
+
+.btn:hover {
+	filter: brightness(110%);
+}
+
+.btn-primary {
+	background: #2a9df4;
+	color: #fff;
 }
