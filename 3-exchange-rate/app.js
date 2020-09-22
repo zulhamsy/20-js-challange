@@ -44,6 +44,11 @@ const currency = [
 	{rate: 'MYR', code: 'MY'},
 	];
 
+// function helper
+function showResult(json) {
+	console.log(json);
+}
+
 // function handler
 function changeFlag(e) {
 	const url = e.target.value;
@@ -51,10 +56,20 @@ function changeFlag(e) {
 	img.src = `https://www.countryflags.io/${url}/flat/32.png`;
 }
 
+function exchangeCurrency(e) {
+	e.preventDefault();
+	const base = document.querySelector('#select-1').selectedOptions[0].text;
+	const trade = document.querySelector('#select-2').selectedOptions[0].text;
+	fetch(`https://api.exchangeratesapi.io/latest?base=${base}&symbols=${trade}`)
+		.then(data => data.json())
+		.then(data => showResult(data));
+}
+
 // Event listener
 base.addEventListener('change', changeFlag);
 trade.addEventListener('change', changeFlag);
-	
+submit.addEventListener('click', exchangeCurrency)
+
 // init
 currency.forEach(rate => {
 	base.innerHTML += `
@@ -62,6 +77,6 @@ currency.forEach(rate => {
 	`;
 	
 	trade.innerHTML += `
-			<option value='${rate.code}'>${rate.rate}</option>
+		<option value='${rate.code}'>${rate.rate}</option>
 		`;
 })
