@@ -7,6 +7,7 @@ const trade_flag = document.querySelector('#flag-2');
 const submit = document.querySelector('button');
 const rate = document.querySelector('#rate');
 const result = document.querySelector('#nom');
+const swap = document.querySelector('.swap');
 
 // Currency List Object
 const currency = [
@@ -72,10 +73,16 @@ function exchangeCurrency(e) {
 		.then(data => showResult(data, trade));
 }
 
+function swapCurrency(e) {
+	[base.value, trade.value] = [trade.value, base.value];
+	[base_flag.src, trade_flag.src] = [trade_flag.src, base_flag.src];
+}
+
 // Event listener
 base.addEventListener('change', changeFlag);
 trade.addEventListener('change', changeFlag);
-submit.addEventListener('click', exchangeCurrency)
+submit.addEventListener('click', exchangeCurrency);
+swap.addEventListener('click', swapCurrency)
 
 // init
 currency.forEach(rate => {
