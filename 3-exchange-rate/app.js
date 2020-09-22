@@ -1,55 +1,67 @@
 // Selectors
 const input = document.querySelector('input');
 const base = document.querySelector('#select-1');
+const base_flag = document.querySelector('#flag-1');
 const trade = document.querySelector('#select-2');
+const trade_flag = document.querySelector('#flag-2');
 const submit = document.querySelector('button');
 const rate = document.querySelector('#rate');
 const result = document.querySelector('#nom');
 
 // Currency List Object
 const currency = [
-	{rate: 'CAD'},
-	{rate: 'HKD'},
-	{rate: 'ISK'},
-	{rate: 'PHP'},
-	{rate: 'DKK'},
-	{rate: 'HUF'},
-	{rate: 'CZK'},
-	{rate: 'AUD'},
-	{rate: 'RON'},
-	{rate: 'SEK'},
-	{rate: 'IDR'},
-	{rate: 'INR'},
-	{rate: 'BRL'},
-	{rate: 'RUB'},
-	{rate: 'HRK'},
-	{rate: 'JPY'},
-	{rate: 'THB'},
-	{rate: 'CHF'},
-	{rate: 'SGD'},
-	{rate: 'PLN'},
-	{rate: 'BGN'},
-	{rate: 'TRY'},
-	{rate: 'CNY'},
-	{rate: 'NOK'},
-	{rate: 'NZD'},
-	{rate: 'ZAR'},
-	{rate: 'USD'},
-	{rate: 'MXN'},
-	{rate: 'ILS'},
-	{rate: 'ISK'},
-	{rate: 'GBP'},
-	{rate: 'KRW'},
-	{rate: 'MYR'},
+	{rate: 'CAD', code: 'CA'},
+	{rate: 'HKD', code: 'HK'},
+	{rate: 'ISK', code: 'IS'},
+	{rate: 'PHP', code: 'PH'},
+	{rate: 'DKK', code: 'DK'},
+	{rate: 'HUF', code: 'HU'},
+	{rate: 'CZK', code: 'CZ'},
+	{rate: 'AUD', code: 'AU'},
+	{rate: 'RON', code: 'RO'},
+	{rate: 'SEK', code: 'SE'},
+	{rate: 'IDR', code: 'ID'},
+	{rate: 'INR', code: 'IN'},
+	{rate: 'BRL', code: 'BR'},
+	{rate: 'RUB', code: 'RU'},
+	{rate: 'HRK', code: 'HR'},
+	{rate: 'JPY', code: 'JP'},
+	{rate: 'THB', code: 'TH'},
+	{rate: 'CHF', code: 'CH'},
+	{rate: 'SGD', code: 'SG'},
+	{rate: 'PLN', code: 'PL'},
+	{rate: 'BGN', code: 'BG'},
+	{rate: 'TRY', code: 'TR'},
+	{rate: 'CNY', code: 'CN'},
+	{rate: 'NOK', code: 'NO'},
+	{rate: 'NZD', code: 'NZ'},
+	{rate: 'ZAR', code: 'ZA'},
+	{rate: 'USD', code: 'US'},
+	{rate: 'MXN', code: 'MX'},
+	{rate: 'ILS', code: 'IL'},
+	{rate: 'GBP', code: 'GB'},
+	{rate: 'KRW', code: 'KP'},
+	{rate: 'MYR', code: 'MY'},
 	];
+
+// function handler
+function changeFlag(e) {
+	const url = e.target.value;
+	const img = e.target.parentNode.children[0];
+	img.src = `https://www.countryflags.io/${url}/flat/32.png`;
+}
+
+// Event listener
+base.addEventListener('change', changeFlag);
+trade.addEventListener('change', changeFlag);
 	
 // init
 currency.forEach(rate => {
 	base.innerHTML += `
-		<option>${rate.rate}</option>
+		<option value='${rate.code}'>${rate.rate}</option>
 	`;
 	
 	trade.innerHTML += `
-			<option>${rate.rate}</option>
+			<option value='${rate.code}'>${rate.rate}</option>
 		`;
 })
