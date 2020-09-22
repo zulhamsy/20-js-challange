@@ -45,11 +45,15 @@ const currency = [
 	];
 
 // function helper
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
 function showResult(json,trade) {
 	console.log(json);
 	
 	rate.innerHTML = trade;
-	nom.innerHTML = (input.value * json.rates[trade]).toFixed(2);
+	nom.innerHTML = formatNumber((input.value * json.rates[trade]).toFixed(2));
 }
 
 // function handler
