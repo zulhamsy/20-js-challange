@@ -51,8 +51,6 @@ function formatNumber(num) {
 }
 
 function showResult(json,trade) {
-	console.log(json);
-	
 	rate.innerHTML = trade;
 	nom.innerHTML = formatNumber((input.value * json.rates[trade]).toFixed(2));
 }
