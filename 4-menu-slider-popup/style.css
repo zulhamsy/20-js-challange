@@ -1,0 +1,48 @@
+/* --------------- Reset ----------------- */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------ Basic Setting ------------ */
+html {
+  font-size: 62.5%;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* -------------- Jumbotron --------------- */
+.title {
+	height: 100vh;
+	min-height: 560px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero {
+	font-size: 3rem;
+}
+
+.lead {
+	font-size: 1.2rem;
+	font-style: italic;
+	padding-top: 0.5em;
+	padding-bottom: 2em;
+}
+
+.btn {
+	outline: none;
+	border: none;
+	font-size: inherit;
+	font-weight: 450;
+	padding: 1em 1.8em;
+	border-radius: 5px;
+}
