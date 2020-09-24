@@ -1,4 +1,4 @@
-/* --------------- Reset ----------------- */
+/* --------------- Reset ------------------ */
 *,
 *:before,
 *:after {
@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-/* ------------ Basic Setting ------------ */
+/* ------------ Basic Setting ------------- */
 html {
   font-size: 62.5%;
   font-family: Helvetica, sans-serif;
@@ -19,30 +19,75 @@ body {
 
 /* -------------- Jumbotron --------------- */
 .title {
-	height: 100vh;
-	min-height: 560px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+  height: 100vh;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('img/bg-new-mobile.jpg') no-repeat;
+  background-size: cover;
 }
 
 .hero {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 .lead {
-	font-size: 1.2rem;
-	font-style: italic;
-	padding-top: 0.5em;
-	padding-bottom: 2em;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
 }
 
 .btn {
-	outline: none;
-	border: none;
-	font-size: inherit;
-	font-weight: 450;
-	padding: 1em 1.8em;
-	border-radius: 5px;
+  outline: none;
+  border: none;
+  font-size: inherit;
+  font-weight: 450;
+  padding: 1em 1.8em;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background: #187bcd;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1167b1;
+}
+
+/*--------------- Hamburger ----------------*/
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  transition: 0.35s ease-out;
+}
+
+/* ------------- Slider Menu -------------- */
+.slider {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  padding: 0.5em;
+  transform: translateX(-100%);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: #fff;
+  webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.5s ease-out;
+}
+
+.menu {
+  list-style: none;
+}
+
+.cross {
+  text-align: right;
 }
