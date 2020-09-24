@@ -88,6 +88,16 @@ body {
   list-style: none;
 }
 
+.menu li {
+	color: #333;
+	font-size: 1.7rem;
+	padding-bottom: 2em;
+}
+
+.menu li:hover {
+	font-weight: 550;
+}
+
 .cross {
   text-align: right;
 }
