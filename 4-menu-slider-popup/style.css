@@ -1,4 +1,4 @@
-/* --------------- Reset ------------------ */
+/* --------------- Reset ----------------- */
 *,
 *:before,
 *:after {
@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-/* ------------ Basic Setting ------------- */
+/* ------------ Basic Setting ------------ */
 html {
   font-size: 62.5%;
   font-family: Helvetica, sans-serif;
@@ -17,10 +17,10 @@ body {
   font-size: 1.6rem;
 }
 
-/* -------------- Jumbotron --------------- */
+/* -------------- Jumbotron -------------- */
 .title {
   height: 100vh;
-  min-height: 560px;
+  max-height: 560px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +58,7 @@ body {
   background: #1167b1;
 }
 
-/*--------------- Hamburger ----------------*/
+/*--------------- Hamburger ---------------*/
 .hamburger {
   position: fixed;
   top: 0;
@@ -67,7 +67,7 @@ body {
   transition: 0.35s ease-out;
 }
 
-/* ------------- Slider Menu -------------- */
+/* ------------- Slider Menu ------------- */
 .slider {
   position: fixed;
   height: 100vh;
@@ -100,4 +100,37 @@ body {
 
 .cross {
   text-align: right;
+}
+
+/* ---------------- Modals --------------- */
+.modal-container {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 30;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.3s;
+	background: rgba(0,0,0,0.55);
+}
+
+.modal {
+	background: #fff;
+	width: 300px;
+	height: 200px;
+	color: #333;
+	border-radius: 8px;
+	padding: 0.7em;
+}
+
+.modal-header {
+	text-align: center;
+	font-size: 1.7rem;
+	font-weight: 500;
+	margin-bottom: 0.5em;
 }

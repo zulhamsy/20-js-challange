@@ -1,0 +1,23 @@
+@media (min-device-width: 640px) {
+	/* Jumbotron */
+	.title {
+		max-height: 100vh;
+	}
+	
+	.hero {
+		background: rgba(0,0,0,0.75);
+		color: #fff;
+		padding: 0.5em;
+		border-radius: 8px;
+	}
+	
+	.lead {
+		font-weight: 600;
+		padding: 0.5em;
+		margin-bottom: 2em;
+		margin-top: 0.5em;
+		background: rgba(0,0,0,0.75);
+		color: #fff;
+		border-radius: 5px;
+	}
+}

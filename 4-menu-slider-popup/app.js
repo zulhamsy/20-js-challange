@@ -3,17 +3,20 @@ const burger = document.querySelector('.hamburger');
 const slider = document.querySelector('.slider');
 const close = document.querySelector('#close-menu');
 const jumbotron = document.querySelector('.title');
+const cta = document.querySelector('.btn');
+const modal = document.querySelector('.modal-container');
 
 // menu state
-const sliderMenu = {
-	state: false
+const states = {
+	slider: false,
+	modal: false
 };
 
 // event
 function showMenu(e) {
 	// show menu
 	slider.style.transform = 'translateX(0%)';
-	sliderMenu.state = true;
+	states.slider = true;
 	// hide hamburger
 	burger.style.transform = 'translateX(100%)';
 }
@@ -21,14 +24,37 @@ function showMenu(e) {
 function closeMenu(e) {
 	// hide menu
 	slider.style.transform = 'translateX(-100%)';
-	sliderMenu.state = false;
+	states.slider = false;
 	// show hamburger
 	burger.style.transform = 'translateX(0%)';
 }
 
+function closeModal(e) {
+	// hide modal
+	modal.style.opacity = '0';
+	modal.style.background = 'rgba(0,0,0,0)';
+	modal.style.visibility = 'hidden';
+	states.modal = false;
+}
+
 function jumbloClose(e) {
-	if(sliderMenu.state) {
+	if(states.slider) {
 		closeMenu();
+	}
+	if(states.modal) {
+		closeModal();
+	}
+}
+
+function showModal(e) {
+	if(!states.modal) {
+		// agar eventnya tidak mentrigger event pada title element / jumbotron
+		e.stopPropagation();
+		// show modal
+		modal.style.visibility = 'visible';
+		modal.style.opacity = '1';
+		modal.style.background = 'rgba(0,0,0,0.55)';
+		states.modal = true;
 	}
 }
 
@@ -36,3 +62,5 @@ function jumbloClose(e) {
 burger.addEventListener('click', showMenu);
 close.addEventListener('click', closeMenu);
 jumbotron.addEventListener('click', jumbloClose);
+cta.addEventListener('click', showModal);
+modal.addEventListener('click', jumbloClose);
