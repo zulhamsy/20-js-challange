@@ -2,35 +2,49 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./v1/style.css" type="text/css" media="all" />
-    <title>Sign In / Sign Up</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./v1/style.css" type="text/css" media="all" />
+  <title>Sign In / Sign Up</title>
 </head>
 
 <body>
-	<!--Container-->
-	<div class="container" id="container">
-		<!--Form Section-->
-		<div class="form-container sign-in">
-			<h1>Sign In</h1>
-		</div>
-		<div class="form-container sign-up">
-			<h1>Sign Up</h1>
-		</div>
-		<!--Overlay Section-->
-		<div class="overlay-container">
-			<div class="overlay">
-				<div class="overlay-child overlay-right">
-					<h1>Don't have account?</h1>
-				</div>
-				<div class="overlay-child overlay-left">
-					<h1>Welcome Back!</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="script.js" type="text/javascript" charset="utf-8"></script>
+  <!--Container-->
+  <div class="container" id="container">
+    <!--Form Section-->
+    <div class="form-container sign-in">
+      <h1>Sign In</h1>
+      <form>
+        <input type="text" placeholder="username" />
+        <input type="password" placeholder="password" />
+      </form>
+      <button class="btn btn-primary" type="submit">sign in</button>
+    </div>
+    <div class="form-container sign-up">
+      <h1>Sign Up</h1>
+      <form>
+        <input type="text" placeholder="email" />
+        <input type="password" placeholder="password" />
+      </form>
+      <button class="btn btn-primary" type="submit">sign up</button>
+    </div>
+    <!--Overlay Section-->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-child overlay-right">
+          <h1>Don't have account?</h1>
+          <p class="lead">Registration only takes a second!</p>
+          <button class="btn btn-secondary" type="submit">okay i'm in</button>
+        </div>
+        <div class="overlay-child overlay-left">
+          <h1>Hey, Welcome Back!</h1>
+          <p class="lead">Ready to login?</p>
+          <button class="btn btn-secondary" type="submit">hell yeah</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
